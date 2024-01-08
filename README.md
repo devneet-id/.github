@@ -1,1 +1,3 @@
-# devneet-id
+We are a community that brings together individuals highly focused on self-development and system development. With the meanings of DEV (focused on development) and NEET (not in education, employment, or training), the community encompasses individuals who are outside the formal paths of education or employment but remain actively engaged in developing their skills and knowledge.
+
+With the spirit of "Life is a choice; choose the best," DEVNEET provides a space for its members to gather, share ideas, and support each other on their journeys of self-improvement. The community promotes positive values, collaboration, and inspiration, creating an environment that nurtures personal growth and the development of technical skills.
