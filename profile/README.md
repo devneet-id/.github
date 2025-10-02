@@ -4,8 +4,4 @@ DEVNEET is a community committed to driving technological progress through the d
 
 Every project at DEVNEET is designed with the aim of accelerating the adoption of modern technology through easy and fast methods. As a community, we believe that openness in sharing knowledge and resources is key to achieving inclusive and sustainable technological progress. Therefore, we always prioritize the principle of openness in every step of our development. With the spirit of collaboration and innovation, DEVNEET strives to be a pioneer in presenting technological solutions that not only meet current needs, but are also able to anticipate future challenges.
 
----
 
-#### Join Us
-Want to become part of DEVNEET? 🎉  
-👉 [Join DEVNEET via Discord](https://discord.gg/55V88E89)
