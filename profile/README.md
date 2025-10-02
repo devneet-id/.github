@@ -8,8 +8,4 @@ Every project at DEVNEET is designed with the aim of accelerating the adoption o
 
 #### Join Us
 Want to become part of DEVNEET? 🎉  
-Fill out the registration form here: 
-
-👉 [Join DEVNEET via Google Form](https://docs.google.com/forms/d/e/1FAIpQLSfKTrLILvtEmmiW9HbLdA9UvhZ6bYsoO0f7CXkEd1rDtk23lA/viewform)
-
 👉 [Join DEVNEET via Discord](https://discord.gg/55V88E89)
