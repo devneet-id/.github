@@ -1,4 +1,4 @@
-[![DEVNEET-ID](https://ik.imagekit.io/anwarachilles/logo-full.png?updatedAt=1758212956776)](https://github.com/devneet-id)
+[![DEVNEET-ID](https://raw.githubusercontent.com/devneet-id/.design/refs/heads/main/official/banner.png)](https://github.com/devneet-id)
 
 DEVNEET is a community committed to driving technological progress through the development of more advanced, fast, easy, and open systems. We focus on creating projects that are public and easily accessible to all. With this approach, we strive to advance technology that is not only sophisticated but also practical and efficient in use. The DEVNEET team consists of individuals who are dedicated to exploring and developing innovative technological solutions, and ensuring that every project we produce can provide significant benefits to the wider community.
 
