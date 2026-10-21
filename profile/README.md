@@ -37,32 +37,25 @@ A lore-driven, modular PHP concept that responds to development rather than dict
 ![code size](https://img.shields.io/github/languages/code-size/devneet-id/rune?style=flat-square&label=size)
 ![issues](https://img.shields.io/github/issues/devneet-id/rune?style=flat-square&label=open%20issues)
 
-### 🔹 exuraphp &nbsp;·&nbsp; PHP · Backend
-A minimalist PHP micro-framework for modern backend development.
+### 🔹 Exura &nbsp;·&nbsp; Minimalist Framework Suite
+One philosophy — minimalist, semantic-first, modern — delivered across three layers of the stack. Each package shares the same design principles; only the target environment differs.
 
-[![repo](https://img.shields.io/badge/repo-devneet--id%2Fexuraphp-24292e?style=flat-square&logo=github)](https://github.com/devneet-id/exuraphp)
-![last commit](https://img.shields.io/github/last-commit/devneet-id/exuraphp?style=flat-square&label=updated)
-![language](https://img.shields.io/github/languages/top/devneet-id/exuraphp?style=flat-square)
-![code size](https://img.shields.io/github/languages/code-size/devneet-id/exuraphp?style=flat-square&label=size)
-![issues](https://img.shields.io/github/issues/devneet-id/exuraphp?style=flat-square&label=open%20issues)
+**exuraphp** · backend micro-framework &nbsp;|&nbsp; **exurajs** · frontend micro-framework &nbsp;|&nbsp; **exuracss** · semantic-first styling
 
-### 🔹 exurajs &nbsp;·&nbsp; JavaScript · Frontend
-A minimalist JavaScript micro-framework for modern frontend development.
+[![exuraphp](https://img.shields.io/badge/repo-exuraphp-777BB4?style=flat-square&logo=php&logoColor=white)](https://github.com/devneet-id/exuraphp)
+![exuraphp updated](https://img.shields.io/github/last-commit/devneet-id/exuraphp?style=flat-square&label=updated)
+![exuraphp size](https://img.shields.io/github/languages/code-size/devneet-id/exuraphp?style=flat-square&label=size)
+![exuraphp issues](https://img.shields.io/github/issues/devneet-id/exuraphp?style=flat-square&label=issues)
 
-[![repo](https://img.shields.io/badge/repo-devneet--id%2Fexurajs-24292e?style=flat-square&logo=github)](https://github.com/devneet-id/exurajs)
-![last commit](https://img.shields.io/github/last-commit/devneet-id/exurajs?style=flat-square&label=updated)
-![language](https://img.shields.io/github/languages/top/devneet-id/exurajs?style=flat-square)
-![code size](https://img.shields.io/github/languages/code-size/devneet-id/exurajs?style=flat-square&label=size)
-![issues](https://img.shields.io/github/issues/devneet-id/exurajs?style=flat-square&label=open%20issues)
+[![exurajs](https://img.shields.io/badge/repo-exurajs-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://github.com/devneet-id/exurajs)
+![exurajs updated](https://img.shields.io/github/last-commit/devneet-id/exurajs?style=flat-square&label=updated)
+![exurajs size](https://img.shields.io/github/languages/code-size/devneet-id/exurajs?style=flat-square&label=size)
+![exurajs issues](https://img.shields.io/github/issues/devneet-id/exurajs?style=flat-square&label=issues)
 
-### 🔹 exuracss &nbsp;·&nbsp; CSS · Styling
-A semantic-first CSS framework.
-
-[![repo](https://img.shields.io/badge/repo-devneet--id%2Fexuracss-24292e?style=flat-square&logo=github)](https://github.com/devneet-id/exuracss)
-![last commit](https://img.shields.io/github/last-commit/devneet-id/exuracss?style=flat-square&label=updated)
-![language](https://img.shields.io/github/languages/top/devneet-id/exuracss?style=flat-square)
-![code size](https://img.shields.io/github/languages/code-size/devneet-id/exuracss?style=flat-square&label=size)
-![issues](https://img.shields.io/github/issues/devneet-id/exuracss?style=flat-square&label=open%20issues)
+[![exuracss](https://img.shields.io/badge/repo-exuracss-663399?style=flat-square&logo=css&logoColor=white)](https://github.com/devneet-id/exuracss)
+![exuracss updated](https://img.shields.io/github/last-commit/devneet-id/exuracss?style=flat-square&label=updated)
+![exuracss size](https://img.shields.io/github/languages/code-size/devneet-id/exuracss?style=flat-square&label=size)
+![exuracss issues](https://img.shields.io/github/issues/devneet-id/exuracss?style=flat-square&label=issues)
 
 <sub>All metrics update live from the GitHub API — no manual maintenance required.</sub>
 
