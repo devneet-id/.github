@@ -1,7 +1,88 @@
-[![DEVNEET-ID](https://raw.githubusercontent.com/devneet-id/.design/refs/heads/main/official/banner.png)](https://github.com/devneet-id)
+**An open community building fast, simple, and accessible software systems.**
 
-DEVNEET is a community committed to driving technological progress through the development of more advanced, fast, easy, and open systems. We focus on creating projects that are public and easily accessible to all. With this approach, we strive to advance technology that is not only sophisticated but also practical and efficient in use. The DEVNEET team consists of individuals who are dedicated to exploring and developing innovative technological solutions, and ensuring that every project we produce can provide significant benefits to the wider community.
+<p>
+  <img alt="Location" src="https://img.shields.io/badge/based_in-Indonesia-red?style=flat-square">
+  <img alt="Focus" src="https://img.shields.io/badge/focus-open_source-0A66C2?style=flat-square">
+  <a href="https://opencollective.com/devneet"><img alt="Open Collective backers" src="https://img.shields.io/opencollective/all/devneet?style=flat-square&label=supporters&color=1F87FF"></a>
+  <a href="https://huggingface.co/devneet"><img alt="Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97-Hugging_Face-FFD21E?style=flat-square"></a>
+</p>
 
-Every project at DEVNEET is designed with the aim of accelerating the adoption of modern technology through easy and fast methods. As a community, we believe that openness in sharing knowledge and resources is key to achieving inclusive and sustainable technological progress. Therefore, we always prioritize the principle of openness in every step of our development. With the spirit of collaboration and innovation, DEVNEET strives to be a pioneer in presenting technological solutions that not only meet current needs, but are also able to anticipate future challenges.
+DEVNEET is a developer community based in Indonesia, dedicated to advancing technology through open, well-engineered, and genuinely usable systems. We design and maintain public projects that lower the barrier to modern software development — favouring clarity over complexity, and practical adoption over novelty for its own sake.
 
+Our work is guided by a single principle: **openness compounds**. Shared knowledge, open source code, and transparent collaboration are, in our view, the most reliable path to technology that is both sophisticated and broadly beneficial.
 
+---
+
+## Tech Stack
+
+<p>
+  <img alt="PHP" src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white">
+  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img alt="CSS" src="https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css&logoColor=white">
+  <img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
+</p>
+
+---
+
+## What We Build
+
+Our projects span the full stack, unified by a minimalist, semantics-first philosophy. Each is designed to be learned quickly, extended cleanly, and run efficiently.
+
+### 🔹 rune &nbsp;·&nbsp; PHP · Concept
+A lore-driven, modular PHP concept that responds to development rather than dictating it.
+
+[![repo](https://img.shields.io/badge/repo-devneet--id%2Frune-24292e?style=flat-square&logo=github)](https://github.com/devneet-id/rune)
+![last commit](https://img.shields.io/github/last-commit/devneet-id/rune?style=flat-square&label=updated)
+![language](https://img.shields.io/github/languages/top/devneet-id/rune?style=flat-square)
+![code size](https://img.shields.io/github/languages/code-size/devneet-id/rune?style=flat-square&label=size)
+![issues](https://img.shields.io/github/issues/devneet-id/rune?style=flat-square&label=open%20issues)
+
+### 🔹 exuraphp &nbsp;·&nbsp; PHP · Backend
+A minimalist PHP micro-framework for modern backend development.
+
+[![repo](https://img.shields.io/badge/repo-devneet--id%2Fexuraphp-24292e?style=flat-square&logo=github)](https://github.com/devneet-id/exuraphp)
+![last commit](https://img.shields.io/github/last-commit/devneet-id/exuraphp?style=flat-square&label=updated)
+![language](https://img.shields.io/github/languages/top/devneet-id/exuraphp?style=flat-square)
+![code size](https://img.shields.io/github/languages/code-size/devneet-id/exuraphp?style=flat-square&label=size)
+![issues](https://img.shields.io/github/issues/devneet-id/exuraphp?style=flat-square&label=open%20issues)
+
+### 🔹 exurajs &nbsp;·&nbsp; JavaScript · Frontend
+A minimalist JavaScript micro-framework for modern frontend development.
+
+[![repo](https://img.shields.io/badge/repo-devneet--id%2Fexurajs-24292e?style=flat-square&logo=github)](https://github.com/devneet-id/exurajs)
+![last commit](https://img.shields.io/github/last-commit/devneet-id/exurajs?style=flat-square&label=updated)
+![language](https://img.shields.io/github/languages/top/devneet-id/exurajs?style=flat-square)
+![code size](https://img.shields.io/github/languages/code-size/devneet-id/exurajs?style=flat-square&label=size)
+![issues](https://img.shields.io/github/issues/devneet-id/exurajs?style=flat-square&label=open%20issues)
+
+### 🔹 exuracss &nbsp;·&nbsp; CSS · Styling
+A semantic-first CSS framework.
+
+[![repo](https://img.shields.io/badge/repo-devneet--id%2Fexuracss-24292e?style=flat-square&logo=github)](https://github.com/devneet-id/exuracss)
+![last commit](https://img.shields.io/github/last-commit/devneet-id/exuracss?style=flat-square&label=updated)
+![language](https://img.shields.io/github/languages/top/devneet-id/exuracss?style=flat-square)
+![code size](https://img.shields.io/github/languages/code-size/devneet-id/exuracss?style=flat-square&label=size)
+![issues](https://img.shields.io/github/issues/devneet-id/exuracss?style=flat-square&label=open%20issues)
+
+<sub>All metrics update live from the GitHub API — no manual maintenance required.</sub>
+
+---
+
+## Our Approach
+
+- **Minimal by design.** We treat every dependency, abstraction, and line of configuration as a cost. Our frameworks aim to do less, so developers can build more.
+- **Open and accessible.** All projects are public and permissively shared. We prioritise clear documentation and low onboarding friction over gatekeeping.
+- **Built to last.** We design for the challenges ahead, not just the needs of today — favouring architectures that remain maintainable as they grow.
+- **Community-driven.** Progress at DEVNEET is collaborative. Contributions, discussion, and shared ownership shape the direction of every project.
+
+---
+
+## Get Involved
+
+We welcome developers, designers, and contributors of all levels.
+
+- **Explore our repositories** — review the code, open an issue, or submit a pull request.
+- **Support our work** — [Open Collective](https://opencollective.com/devneet)
+- **Explore our models & datasets** — [Hugging Face](https://huggingface.co/devneet)
+
+<sub>📍 Indonesia · Advancing open technology, together.</sub>
