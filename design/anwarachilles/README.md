@@ -1,7 +1,6 @@
 ## Main
 
 <table>
-  <p>Version 2</p>
   <tr>
     <td align="center">
       <img src="main/v2-logo-1.svg" width="220"><br>

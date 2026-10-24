@@ -1,0 +1,313 @@
+<?php
+/**
+ * Act. 1 - Understanding Its Flow
+ * THE AWAKENING ✦
+ *
+ * From the silence of nothingness, echoes rise from the void.
+ * A journey begins — with runes at your side.
+ *
+ * Run this script using:
+ *   $ php cast
+ *   $ php cast grimoire
+ *
+ * Design gallery management:
+ *   $ php cast design              # generate missing collection READMEs + rebuild index
+ *   $ php cast design --check      # preview changes without writing
+ *   $ php cast design --force      # rebuild every collection README too
+ *   $ php cast design-scan         # list collections, asset counts and README status
+ *   $ php cast design-user --name=<username>   # (re)generate one collection README
+ */
+require_once __DIR__ . '/vendor/autoload.php';
+
+
+
+/**
+ * I N V O C A T I O N
+ *
+ * Step 1 — Summon the runes:
+ * Import each module's manifest.
+ *
+ * Step 2 — Channel the energy:
+ * Initialize ether, essence, and entity.
+ *
+ * Note: Keep #sentinel markers if you're using Sentinel support.
+ */
+use Rune\Aether\Manifest as Aether;
+use Rune\Whisper\Manifest as Whisper;
+use Rune\Weaver\Manifest as Weaver;
+use Rune\Chanter\Manifest as Chanter;
+use Rune\Forger\Manifest as Forger;
+#sentinel-manifest
+
+Aether::ether()::essence()::entity();
+Whisper::ether()::essence()::entity();
+Weaver::ether()::essence()::entity();
+Chanter::ether()::essence()::entity();
+Forger::ether()::essence()::entity();
+#sentinel-awaken
+
+
+
+/**
+ * G R I M O I R E   O F   T H E   G A L L E R Y
+ *
+ * Small helpers that read the design/ repo and engrave Markdown.
+ * One rune, one purpose — these only shape text and never speak to the CLI.
+ */
+
+// Image kinds a collection may hold.
+function design_is_image(string $ext): bool {
+  return in_array(strtolower($ext), ['svg', 'png', 'jpg', 'jpeg', 'gif', 'webp'], true);
+}
+
+// "v2-logo-1" -> "V2 Logo 1"
+function design_titleize(string $name): string {
+  return ucwords(trim(preg_replace('/[-_]+/', ' ', $name)));
+}
+
+// Collect image files directly inside $dir. Dedupe by name, preferring SVG.
+// $prefix is prepended to each src (e.g. "main/").
+function design_collect_images(string $dir, string $prefix): array {
+  $seen = [];
+  foreach (Forger::scan($dir) as $f) {
+    if (is_dir($f['target'])) continue;
+    $ext = strtolower($f['extension'] ?? '');
+    if (!design_is_image($ext)) continue;
+
+    $key = $f['filename'];
+    $src = $prefix . $f['basename'];
+
+    if (isset($seen[$key])) {
+      if ($ext === 'svg') $seen[$key]['src'] = $src; // prefer vector
+      continue;
+    }
+    $seen[$key] = ['name' => $key, 'src' => $src];
+  }
+  return array_values($seen);
+}
+
+// Group a collection's assets: loose files first, then one group per topic folder.
+function design_user_groups(string $userDir): array {
+  $groups = [];
+
+  $root = design_collect_images($userDir, '');
+  if ($root) $groups[''] = $root;
+
+  $topics = [];
+  foreach (Forger::scan($userDir) as $e) {
+    if (!is_dir($e['target'])) continue;
+    $topic = $e['basename'];
+    $items = design_collect_images($e['target'], $topic . '/');
+    if ($items) $topics[$topic] = $items;
+  }
+  ksort($topics);
+  foreach ($topics as $k => $v) $groups[$k] = $v;
+
+  return $groups;
+}
+
+// Total assets across all groups.
+function design_user_count(array $groups): int {
+  $n = 0;
+  foreach ($groups as $items) $n += count($items);
+  return $n;
+}
+
+// Engrave a single collection's README.md (gallery grouped by topic, 3 per row).
+function design_user_markdown(string $username, array $groups): string {
+  $md  = "[← Back to Design Gallery](../README.md)\n\n";
+  $md .= "# {$username}\n\n";
+
+  if (!$groups) {
+    return $md . "_No assets yet._\n";
+  }
+
+  foreach ($groups as $topic => $items) {
+    $heading = ($topic === '') ? 'Assets' : design_titleize($topic);
+    $md .= "## {$heading}\n\n<table>\n  <tr>\n";
+
+    $col = 0;
+    foreach ($items as $it) {
+      if ($col === 3) { $md .= "  </tr>\n  <tr>\n"; $col = 0; }
+      $label = design_titleize($it['name']);
+      $md .= "    <td align=\"center\">\n";
+      $md .= "      <img src=\"{$it['src']}\" width=\"200\"><br>\n";
+      $md .= "      <sub>{$label}</sub>\n";
+      $md .= "    </td>\n";
+      $col++;
+    }
+
+    $md .= "  </tr>\n</table>\n\n";
+  }
+
+  return rtrim($md) . "\n";
+}
+
+// List collection folders under design/ (skipping reserved names).
+function design_collections(string $design, array $reserved): array {
+  $out = [];
+  foreach (Forger::scan($design) as $e) {
+    if (!is_dir($e['target'])) continue;
+    $name = $e['basename'];
+    if (in_array($name, $reserved, true)) continue;
+    $out[] = $name;
+  }
+  sort($out);
+  return $out;
+}
+
+// Engrave design/README.md — the gallery index mapping every collection.
+function design_index_markdown(array $rows): string {
+  $md  = "# 🎨 Design Gallery\n\n";
+  $md .= "A curated collection of visual concepts, explorations, and brand assets for DEVNEET. Browse the variations and compare directions that shape our visual identity.\n\n";
+  $md .= "<p>\n";
+  $md .= "  <img alt=\"Last updated\" src=\"https://img.shields.io/github/last-commit/devneet-id/.github?path=design&style=flat-square&label=last%20updated\">\n";
+  $md .= "</p>\n\n";
+  $md .= "## Collections\n\n";
+  $md .= "| Collection | Concepts |\n| :--- | :--- |\n";
+  foreach ($rows as $row) {
+    [$name, $count] = $row;
+    $md .= "| [{$name}]({$name}/README.md) | {$count} |\n";
+  }
+  $md .= "\n## Contributing\n\n";
+  $md .= "Open the `design/` folder, then upload your own folder — that's it.\n";
+  return $md;
+}
+
+
+
+/**
+ * I N C A N T A T I O N
+ *
+ * This is your working space.
+ * Use begin() and end() to define the active logic scope.
+ */
+Aether::begin();
+Chanter::begin();
+
+// ✦ Main logic lives here
+
+// Where the gallery lives (…/.github/design) and folders that are not collections.
+$DESIGN   = dirname(__DIR__) . '/design';
+$RESERVED = ['official'];
+
+/**
+ * CAST — design
+ * Read each collection, generate any missing README, then rebuild the index.
+ */
+Chanter::cast(
+  arg: 'design --check --force',
+  echo: 'Sync the design gallery: generate missing collection READMEs and rebuild the index.',
+  execute: function () use ($DESIGN, $RESERVED) {
+    $check = (bool) Chanter::spell('check');
+    $force = (bool) Chanter::spell('force');
+
+    Whisper::echo("{{nl}}{{color-primary}} ✦ Design Gallery — Sync{{color-end}}{{nl}}");
+
+    if (!is_dir($DESIGN)) {
+      Whisper::echo("{{color-failed}}{{icon-failed}} design/ folder not found.{{color-end}}{{nl}}");
+      return;
+    }
+
+    $collections = design_collections($DESIGN, $RESERVED);
+    if (!$collections) {
+      Whisper::echo("{{color-warning}}{{icon-warning}} No collections found.{{color-end}}{{nl}}");
+      return;
+    }
+
+    $rows = [];
+    foreach ($collections as $name) {
+      $userDir = $DESIGN . '/' . $name;
+      $groups  = design_user_groups($userDir);
+      $count   = design_user_count($groups);
+      $readme  = $userDir . '/README.md';
+      $exists  = file_exists($readme);
+
+      if (!$exists || $force) {
+        if ($check) {
+          $tag = $exists ? 'would update' : 'would create';
+          Whisper::echo("{{color-info}}{{icon-info}} {$name}: {$tag} README {{color-secondary}}({$count} assets){{color-end}}{{nl}}");
+        } else {
+          Forger::item($readme, design_user_markdown($name, $groups));
+          $tag = $exists ? 'updated' : 'created';
+          Whisper::echo("{{color-success}}{{icon-success}} {$name}: {$tag} README {{color-secondary}}({$count} assets){{color-end}}{{nl}}");
+        }
+      } else {
+        Whisper::echo("{{color-secondary}}{{icon-secondary}} {$name}: README ok ({$count} assets){{color-end}}{{nl}}");
+      }
+
+      $rows[] = [$name, $count];
+    }
+
+    if ($check) {
+      Whisper::echo("{{nl}}{{color-info}}{{icon-info}} would rebuild design/README.md (" . count($rows) . " collections){{color-end}}{{nl}}");
+    } else {
+      Forger::item($DESIGN . '/README.md', design_index_markdown($rows));
+      Whisper::echo("{{nl}}{{color-success}}{{icon-success}} rebuilt design/README.md (" . count($rows) . " collections){{color-end}}{{nl}}");
+    }
+
+    Whisper::echo("{{nl}}");
+  }
+);
+
+/**
+ * CAST — design-scan
+ * Read-only: list collections with asset counts and README status.
+ */
+Chanter::cast(
+  arg: 'design-scan',
+  echo: 'List design collections with asset count and README status.',
+  execute: function () use ($DESIGN, $RESERVED) {
+    Whisper::echo("{{nl}}{{color-primary}} ✦ Design Gallery — Collections{{color-end}}{{nl}}");
+
+    if (!is_dir($DESIGN)) {
+      Whisper::echo("{{color-failed}}{{icon-failed}} design/ folder not found.{{color-end}}{{nl}}");
+      return;
+    }
+
+    foreach (design_collections($DESIGN, $RESERVED) as $name) {
+      $dir    = $DESIGN . '/' . $name;
+      $count  = design_user_count(design_user_groups($dir));
+      $readme = file_exists($dir . '/README.md');
+      $badge  = $readme
+        ? "{{color-success}}{{icon-success}} readme"
+        : "{{color-warning}}{{icon-warning}} no readme";
+      Whisper::echo("{{color-info}} • {$name} {{color-secondary}}({$count} assets)  {$badge}{{color-end}}{{nl}}");
+    }
+
+    Whisper::echo("{{nl}}");
+  }
+);
+
+/**
+ * CAST — design-user
+ * (Re)generate a single collection's README.md.
+ *   php cast design-user --name=<username>
+ */
+Chanter::cast(
+  arg: 'design-user --name',
+  echo: 'Generate or refresh one collection README: php cast design-user --name=<username>.',
+  execute: function () use ($DESIGN) {
+    $name = Chanter::spell('name');
+
+    if (!$name) {
+      Whisper::echo("{{nl}}{{color-failed}}{{icon-failed}} Provide a collection: --name=<username>{{color-end}}{{nl}}{{nl}}");
+      return;
+    }
+
+    $dir = $DESIGN . '/' . $name;
+    if (!is_dir($dir)) {
+      Whisper::echo("{{nl}}{{color-failed}}{{icon-failed}} Collection '{$name}' not found.{{color-end}}{{nl}}{{nl}}");
+      return;
+    }
+
+    $groups = design_user_groups($dir);
+    Forger::item($dir . '/README.md', design_user_markdown($name, $groups));
+    Whisper::echo("{{nl}}{{color-success}}{{icon-success}} {$name}: README written (" . design_user_count($groups) . " assets){{color-end}}{{nl}}{{nl}}");
+  }
+);
+
+
+#sentinel-codex
+Chanter::end();
+Aether::end();

@@ -8,7 +8,10 @@ A curated collection of visual concepts, explorations, and brand assets for DEVN
 
 ## Collections
 
-[anwarachilles](anwarachilles/README.md)
+| Collection | Concepts |
+| :--- | :--- |
+| [anwarachilles](anwarachilles/README.md) | 9 |
+| [mreazenith](mreazenith/README.md) | 18 |
 
 ## Contributing
 
