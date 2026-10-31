@@ -29,7 +29,7 @@ Our work is guided by a single principle: **openness compounds**. Shared knowled
 Our projects span the full stack, unified by a minimalist, semantics-first philosophy. Each is designed to be learned quickly, extended cleanly, and run efficiently.
 
 ### 🔹 rune &nbsp;·&nbsp; PHP · Concept
-A lore-driven, modular PHP concept that responds to development rather than dictating it.
+A lore-driven, modular concept beneath PHP that responds to development rather than dictating it.
 
 [![repo](https://img.shields.io/badge/repo-devneet--id%2Frune-24292e?style=flat-square&logo=github)](https://github.com/devneet-id/rune)
 ![last commit](https://img.shields.io/github/last-commit/devneet-id/rune?style=flat-square&label=updated)
@@ -37,8 +37,21 @@ A lore-driven, modular PHP concept that responds to development rather than dict
 ![code size](https://img.shields.io/github/languages/code-size/devneet-id/rune?style=flat-square&label=size)
 ![issues](https://img.shields.io/github/issues/devneet-id/rune?style=flat-square&label=open%20issues)
 
-### 🔹 Exura &nbsp;·&nbsp; Minimalist Framework Suite
-One philosophy — minimalist, semantic-first, modern — delivered across three layers of the stack. Each package shares the same design principles; only the target environment differs.
+### 🔹 reliquary &nbsp;·&nbsp; PHP · Package Manager
+The Relic Package Manager (RPM) for Rune — decentralized by design, with no central registry: the repository itself is the registry, and packages interconnect by fork.
+
+[![repo](https://img.shields.io/badge/repo-devneet--id%2Freliquary-24292e?style=flat-square&logo=github)](https://github.com/devneet-id/reliquary)
+![last commit](https://img.shields.io/github/last-commit/devneet-id/reliquary?style=flat-square&label=updated)
+![language](https://img.shields.io/github/languages/top/devneet-id/reliquary?style=flat-square)
+![code size](https://img.shields.io/github/languages/code-size/devneet-id/reliquary?style=flat-square&label=size)
+![issues](https://img.shields.io/github/issues/devneet-id/reliquary?style=flat-square&label=open%20issues)
+
+### 🔹 exura &nbsp;·&nbsp; Minimalist Framework Series
+One philosophy — minimalist, semantic-first, modern — delivered across three layers of the stack. Each package shares the same design principles and can be used independently; only the target environment differs.
+
+[![repo](https://img.shields.io/badge/repo-devneet--id%2Fexura-24292e?style=flat-square&logo=github)](https://github.com/devneet-id/exura)
+![last commit](https://img.shields.io/github/last-commit/devneet-id/exura?style=flat-square&label=updated)
+![issues](https://img.shields.io/github/issues/devneet-id/exura?style=flat-square&label=open%20issues)
 
 **exuraphp** · backend micro-framework &nbsp;|&nbsp; **exurajs** · frontend micro-framework &nbsp;|&nbsp; **exuracss** · semantic-first styling
 
