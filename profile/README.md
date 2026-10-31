@@ -37,7 +37,7 @@ A lore-driven, modular concept beneath PHP that responds to development rather t
 ![code size](https://img.shields.io/github/languages/code-size/devneet-id/rune?style=flat-square&label=size)
 ![issues](https://img.shields.io/github/issues/devneet-id/rune?style=flat-square&label=open%20issues)
 
-### 🔹 reliquary &nbsp;·&nbsp; PHP · Package Manager
+### 🔹 reliquary &nbsp;·&nbsp; Package Manager
 The Relic Package Manager (RPM) for Rune — decentralized by design, with no central registry: the repository itself is the registry, and packages interconnect by fork.
 
 [![repo](https://img.shields.io/badge/repo-devneet--id%2Freliquary-24292e?style=flat-square&logo=github)](https://github.com/devneet-id/reliquary)
