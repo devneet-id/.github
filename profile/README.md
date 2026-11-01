@@ -37,7 +37,7 @@ A lore-driven, modular concept beneath PHP that responds to development rather t
 ![code size](https://img.shields.io/github/languages/code-size/devneet-id/rune?style=flat-square&label=size)
 ![issues](https://img.shields.io/github/issues/devneet-id/rune?style=flat-square&label=open%20issues)
 
-### 🔹 reliquary &nbsp;·&nbsp; PHP · Relic Registry
+### 🔹 reliquary &nbsp;·&nbsp; Relic Registry
 The Federated Relic Registry for Rune — no central registry: the repo *is* the registry, federated by fork. A relic (`.rune`) is a sealed snapshot of a runite — code, echoes and shards in one file — much like a Docker image. A reliquary holds no relic; it only records where each rests and the seal (sha256) it bore.
 
 [![repo](https://img.shields.io/badge/repo-devneet--id%2Freliquary-24292e?style=flat-square&logo=github)](https://github.com/devneet-id/reliquary)
