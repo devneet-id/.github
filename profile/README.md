@@ -28,6 +28,13 @@ Our work is guided by a single principle: **openness compounds**. Shared knowled
 
 Our projects span the full stack, unified by a minimalist, semantics-first philosophy. Each is designed to be learned quickly, extended cleanly, and run efficiently.
 
+### 🔹 lore &nbsp;·&nbsp; Knowledge Base
+The central knowledge home of DEVNEET — maps, a running log, and per-project docs, for humans and AI alike. Start here to understand the whole ecosystem and where each project stands.
+
+[![repo](https://img.shields.io/badge/repo-devneet--id%2Flore-24292e?style=flat-square&logo=github)](https://github.com/devneet-id/lore)
+![last commit](https://img.shields.io/github/last-commit/devneet-id/lore?style=flat-square&label=updated)
+![issues](https://img.shields.io/github/issues/devneet-id/lore?style=flat-square&label=open%20issues)
+
 ### 🔹 rune &nbsp;·&nbsp; PHP · Concept
 A lore-driven, modular concept beneath PHP that responds to development rather than dictating it.
 
@@ -87,6 +94,7 @@ One philosophy — minimalist, semantic-first, modern — delivered across three
 
 We welcome developers, designers, and contributors of all levels.
 
+- **Start with [lore](https://github.com/devneet-id/lore)** — the map of everything we build.
 - **Explore our repositories** — review the code, open an issue, or submit a pull request.
 - **Support our work** — [Open Collective](https://opencollective.com/devneet)
 - **Explore our models & datasets** — [Hugging Face](https://huggingface.co/devneet)
