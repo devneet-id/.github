@@ -11,6 +11,27 @@ DEVNEET is a developer community based in Indonesia, dedicated to advancing tech
 
 Our work is guided by a single principle: **openness compounds**. Shared knowledge, open source code, and transparent collaboration are, in our view, the most reliable path to technology that is both sophisticated and broadly beneficial.
 
+> **✦ Covenant.**
+>
+> * We never promise a ready-made framework, but we will never let you start from the void.
+> * We never expect a single rune to wield impossible power, but we shape it to be simple, unique, and bound to others in harmony.
+> * We never aim to become a massive engine that burdens creation, but we exist to bring a single idea to life — swiftly, cleanly, and with purpose.
+>
+> This is the covenant: not to build for you, but to forge alongside you — from the void to the vision.
+
+---
+
+## ⚖️ Before you touch any repository — start at lore
+
+Every project here is worked on **through [lore](https://github.com/devneet-id/lore)**, under its **[covenant](https://github.com/devneet-id/lore/tree/main/covenant)** — the laws that bind every operator and every agent who works with us. Do not open issues or pull requests on a project before you have walked this path:
+
+1. **[Read lore](https://github.com/devneet-id/lore#readme)** — how we work, and the reading path. *(Agents: [`AGENTS.md`](https://github.com/devneet-id/lore/blob/main/AGENTS.md) — the same text.)*
+2. **[Read the covenant](https://github.com/devneet-id/lore/tree/main/covenant)** — how work flows, how to chronicle, how to release, how lore changes.
+3. **Choose your realm** — read its page in [lore/realms](https://github.com/devneet-id/lore/tree/main/realms): its repos, how to set them up, how work is tested.
+4. **Only then contribute** — through the project's issues and pull requests, the way the [workflow](https://github.com/devneet-id/lore/blob/main/covenant/workflow.md) says.
+
+Work that skips lore and the covenant will be sent back to it.
+
 ---
 
 ## Tech Stack
@@ -28,8 +49,8 @@ Our work is guided by a single principle: **openness compounds**. Shared knowled
 
 Our projects span the full stack, unified by a minimalist, semantics-first philosophy. Each is designed to be learned quickly, extended cleanly, and run efficiently.
 
-### 🔹 lore &nbsp;·&nbsp; Knowledge Base
-The central knowledge home of DEVNEET — maps, a running log, and per-project docs, for humans and AI alike. Start here to understand the whole ecosystem and where each project stands.
+### 🔹 lore &nbsp;·&nbsp; Knowledge Base · **start here**
+The central knowledge home of DEVNEET and the first place every operator and every agent steps into: the covenant, the maps, the running log, and per-project docs. Every project below is entered through lore.
 
 [![repo](https://img.shields.io/badge/repo-devneet--id%2Flore-24292e?style=flat-square&logo=github)](https://github.com/devneet-id/lore)
 ![last commit](https://img.shields.io/github/last-commit/devneet-id/lore?style=flat-square&label=updated)
@@ -86,16 +107,20 @@ One philosophy — minimalist, semantic-first, modern — delivered across three
 - **Minimal by design.** We treat every dependency, abstraction, and line of configuration as a cost. Our frameworks aim to do less, so developers can build more.
 - **Open and accessible.** All projects are public and permissively shared. We prioritise clear documentation and low onboarding friction over gatekeeping.
 - **Built to last.** We design for the challenges ahead, not just the needs of today — favouring architectures that remain maintainable as they grow.
-- **Community-driven.** Progress at DEVNEET is collaborative. Contributions, discussion, and shared ownership shape the direction of every project.
+- **Community-driven, under a covenant.** Progress at DEVNEET is collaborative — and it follows the [covenant](https://github.com/devneet-id/lore/tree/main/covenant): every contribution comes through lore, every decision is an operator's, and every agent works within its division.
 
 ---
 
 ## Get Involved
 
-We welcome developers, designers, and contributors of all levels.
+We welcome developers, designers, and contributors of all levels — through one door.
 
-- **Start with [lore](https://github.com/devneet-id/lore)** — the map of everything we build.
-- **Explore our repositories** — review the code, open an issue, or submit a pull request.
+1. **Start at [lore](https://github.com/devneet-id/lore)** and read the **[covenant](https://github.com/devneet-id/lore/tree/main/covenant)** — nothing else first.
+2. **Choose a realm** and follow its page in lore to set up its repos.
+3. **Contribute** through that project's issues and pull requests, by the [workflow](https://github.com/devneet-id/lore/blob/main/covenant/workflow.md).
+
+Building something *with* our projects? Keep a [`JOURNEY.md`](https://github.com/devneet-id/lore/blob/main/covenant/journey.md) and share it — your difficulties become our fixes.
+
 - **Support our work** — [Open Collective](https://opencollective.com/devneet)
 - **Explore our models & datasets** — [Hugging Face](https://huggingface.co/devneet)
 
